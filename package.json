@@ -1,0 +1,52 @@
+{
+  "name": "roman-numerals",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --detailed-report --no-source-maps",
+    "new-component": "node scripts/new-component.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.8",
+    "@babel/preset-env": "^7.26.8",
+    "@babel/preset-react": "^7.26.3",
+    "@parcel/reporter-bundle-analyzer": "^2.13.3",
+    "autoprefixer": "^10.4.20",
+    "jest": "^29.7.0",
+    "parcel": "^2.13.3",
+    "postcss": "^8.5.1",
+    "postcss-nested": "^7.0.2",
+    "process": "^0.11.10"
+  },
+  "type": "module",
+  "postcss": {
+    "plugins": {
+      "postcss-nested": {}
+    }
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": [
+        "babel-jest",
+        {
+          "configFile": "./babel.config.test.js"
+        }
+      ]
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "babel.config.test.js",
+      ".babelrc.test.js"
+    ]
+  }
+}

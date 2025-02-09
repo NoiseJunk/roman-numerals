@@ -1,0 +1,154 @@
+:root {
+  --primary-color: #8b7355;
+  --border-color: #ccc;
+  --text-color: #333;
+  --placeholder-color: #666;
+  --input-padding: 8px 12px;
+  --header-footer-bg: #1a1a1a;
+  --header-footer-text-color: white;
+}
+
+a {
+  color: var(--header-footer-text-color);
+  &:hover, 
+  &:focus,
+  &:active {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+}
+
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+} 
+
+.Header {
+  background-color: var(--header-footer-bg);  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 1em 0;
+  z-index: 1;
+
+  &::before,
+    &::after {
+      content: 'MMXXV'; /* 2025 - Updated to match footer copyright year */
+      position: absolute;
+      color: rgba(255, 255, 240, 0.4); /* Faded ivory color */
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.75em;
+    }
+
+    &::before {
+      left: 1em;
+    }
+
+    &::after {
+      right: 1em;
+    }
+
+    @media screen and (max-width: 768px) {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+  h1 {
+    margin: 0;
+    padding: var(--input-padding);
+    color: var(--header-footer-text-color);
+    position: relative;
+    &::before,
+    &::after {
+      content: '-';
+      font-size: 1.25em;
+    }
+
+    &::before {
+      position: relative;
+      left: -0.25em;
+    }
+
+    &::after {
+      position: relative;
+      right: -0.25em;
+    
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.25rem;
+
+      
+    }    
+  }
+}
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  background-color: #E8CEBF;
+  padding: 0;
+  margin: 0;
+
+}
+
+.Main {
+  background: linear-gradient(rgba(249, 249, 249, 0.4), rgba(249, 249, 249, 0.9)), 
+                url('./assets/colosseum.webp') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 500px;
+  /* height: calc(auto - 4em - 4em); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2em;
+  gap: 2em;
+  
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 1em;
+  } */
+
+  @media screen and (max-width: 768px) {
+    gap: 2em;
+  }
+}
+
+.Footer {
+    background-color: var(--header-footer-bg);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1em 2em;
+    position: relative;
+    z-index: 2;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--header-footer-text-color);
+
+    a {
+      color: var(--header-footer-text-color);
+      &:is([target="_blank"]) {
+        &::after {
+          content: '🔗';
+          font-size: 0.8rem;
+          margin-left: 0.5em;
+          font-weight: 600;
+        }
+      }
+    }
+    
+}
+
+
