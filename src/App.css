@@ -110,18 +110,6 @@ body {
   flex-direction: column;
   gap: 1em;
 
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  max-width: 1200px;
-  padding: 2em;
-  gap: 2em;
-  
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    padding: 1em;
-  } */
-
   @media screen and (max-width: 768px) {
     gap: 2em;
   }
@@ -136,6 +124,8 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--header-footer-text-color);
+
+    
 
     a {
       color: var(--header-footer-text-color);
