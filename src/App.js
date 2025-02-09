@@ -23,7 +23,7 @@ function App() {
             <footer className='Footer'>
                 <p>Built by Simon Middleton - Copyright &copy; MMXXV</p>
                 <p>
-                    <a href="https://github.com/simonmiddleton" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://github.com/NoiseJunk/roman-numerals" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                 </p>
             </footer>    
         </div>
