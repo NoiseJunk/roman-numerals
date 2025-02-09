@@ -31,6 +31,11 @@ function EnterNumber({ onNumberChange }) {
                 className={styles.input}
                 value={number}
                 onChange={handleChange}
+                onKeyDown={(e) => {
+                    if (e.key === 'e' || e.key === 'E') {
+                        e.preventDefault();
+                    }
+                }}
             />
         </div>
     );

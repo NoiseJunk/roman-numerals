@@ -8,7 +8,8 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:coverage": "jest --coverage",
     "predeploy": "parcel build src/index.html --public-url /roman-numerals/",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "publish": "git push origin main && npm run deploy"
   },
   "keywords": [],
   "author": "",

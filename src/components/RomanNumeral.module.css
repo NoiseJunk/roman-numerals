@@ -22,9 +22,11 @@
         font-size: 2rem;
         height: 50px;
         min-width: 230px;
-        max-width: 90%;
+        width: 80%;
+        max-width: 80%;
         padding: 2rem 1rem;
         margin-bottom: 0;
+        margin-top: 3em;
     }
 
     &::before,
@@ -90,7 +92,8 @@
         font-size: 2rem;
         height: 50px;
         min-width: 230px;
-        max-width: 90%;
+        max-width: 80%;
+        width: 100%;
     }
 
     &:empty {

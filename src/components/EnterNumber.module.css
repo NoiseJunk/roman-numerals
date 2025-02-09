@@ -18,7 +18,7 @@
         min-width: auto;
         max-width: 80%;
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 0;
         
         &::before,
         &::after {
@@ -52,11 +52,11 @@
     }
 
     &::before {
-        left: 1rem;
+        left: 1.5rem;
     }
 
     &::after {
-        right: 1rem;
+        right: 1.5rem;
     }
 
     @media screen and (max-width: 768px) { 
@@ -66,13 +66,13 @@
         }
 
         &::before {
-            left: 0.5rem;
+            left: 1rem;
             bottom: 0.5rem;
             top: auto;
         }
 
         &::after {
-            right: 0.5rem;
+            right: 1rem;
             bottom: 0.5rem;
             top: auto;
         }
