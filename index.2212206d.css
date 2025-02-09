@@ -297,8 +297,8 @@ body {
 }
 
 .sOPVsW_highlight {
-  color: var(--primary-color);
-  font-weight: 600;
+  color: #333;
+  font-weight: 700;
   display: block;
 }
 
