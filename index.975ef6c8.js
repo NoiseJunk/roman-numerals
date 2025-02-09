@@ -18701,9 +18701,11 @@ function EnterNumber({ onNumberChange }) {
         // Allow empty input and clear result
         if (inputValue === '') {
             setNumber('');
-            onNumberChange(''); // Changed to pass empty string instead of 1
+            onNumberChange('');
             return;
         }
+        // Only allow numeric input
+        if (!/^\d+$/.test(inputValue)) return;
         // Apply limits for actual numbers
         const value = Math.min(Math.max(inputValue, 1), 3999);
         setNumber(value);
@@ -18722,14 +18724,14 @@ function EnterNumber({ onNumberChange }) {
                         children: "1 and 3999"
                     }, void 0, false, {
                         fileName: "src/components/EnterNumber.js",
-                        lineNumber: 25,
+                        lineNumber: 30,
                         columnNumber: 92
                     }, this),
                     " to convert to Roman Numerals"
                 ]
             }, void 0, true, {
                 fileName: "src/components/EnterNumber.js",
-                lineNumber: 25,
+                lineNumber: 30,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -18745,13 +18747,13 @@ function EnterNumber({ onNumberChange }) {
                 }
             }, void 0, false, {
                 fileName: "src/components/EnterNumber.js",
-                lineNumber: 26,
+                lineNumber: 31,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/EnterNumber.js",
-        lineNumber: 24,
+        lineNumber: 29,
         columnNumber: 9
     }, this);
 }
