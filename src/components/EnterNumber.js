@@ -10,7 +10,12 @@ function EnterNumber({ onNumberChange }) {
         // Allow empty input and clear result
         if (inputValue === '') {
             setNumber('');
-            onNumberChange(''); // Changed to pass empty string instead of 1
+            onNumberChange('');
+            return;
+        }
+
+        // Only allow numeric input
+        if (!/^\d+$/.test(inputValue)) {
             return;
         }
 
