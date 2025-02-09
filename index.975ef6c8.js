@@ -18739,7 +18739,10 @@ function EnterNumber({ onNumberChange }) {
                 placeholder: "Enter a number:-",
                 className: (0, _enterNumberModuleCssDefault.default).input,
                 value: number,
-                onChange: handleChange
+                onChange: handleChange,
+                onKeyDown: (e)=>{
+                    if (e.key === 'e' || e.key === 'E') e.preventDefault();
+                }
             }, void 0, false, {
                 fileName: "src/components/EnterNumber.js",
                 lineNumber: 26,
