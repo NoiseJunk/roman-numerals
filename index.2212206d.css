@@ -284,6 +284,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (width <= 768px) {
+  .sOPVsW_input::placeholder {
+    width: 100%;
+    font-size: .8rem;
+    position: relative;
+    top: -.25em;
+    left: 0;
+    transform: none;
+  }
+}
+
 .sOPVsW_input:focus {
   border-color: var(--primary-color);
   outline: none;
