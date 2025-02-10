@@ -18965,19 +18965,26 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _romanNumeralModuleCss = require("./RomanNumeral.module.css");
 var _romanNumeralModuleCssDefault = parcelHelpers.interopDefault(_romanNumeralModuleCss);
 function RomanNumeral({ result }) {
+    const displayText = result === '' ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+        children: "Result will appear here"
+    }, void 0, false, {
+        fileName: "src/components/RomanNumeral.js",
+        lineNumber: 5,
+        columnNumber: 41
+    }, this) : result;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: (0, _romanNumeralModuleCssDefault.default).romannumeral,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
             className: (0, _romanNumeralModuleCssDefault.default).result,
-            children: result
+            children: displayText
         }, void 0, false, {
             fileName: "src/components/RomanNumeral.js",
-            lineNumber: 7,
+            lineNumber: 9,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "src/components/RomanNumeral.js",
-        lineNumber: 6,
+        lineNumber: 8,
         columnNumber: 9
     }, this);
 }

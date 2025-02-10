@@ -388,6 +388,12 @@ body {
   position: relative;
 }
 
+.r7Gx5W_result span {
+  color: #8b7355;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
 @media screen and (width <= 768px) {
   .r7Gx5W_result {
     width: 100%;
@@ -396,12 +402,5 @@ body {
     height: 50px;
     font-size: 2rem;
   }
-}
-
-.r7Gx5W_result:empty:before {
-  content: "Result will appear here";
-  color: #8b7355;
-  font-size: 1rem;
-  font-weight: normal;
 }
 /*# sourceMappingURL=index.2212206d.css.map */
