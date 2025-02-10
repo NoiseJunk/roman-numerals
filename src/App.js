@@ -11,10 +11,11 @@ function App() {
         const convertedNumber = romanNumeralGenerator(number);
         // console.log('Input:', number, 'Output:', convertedNumber);
         setResult(convertedNumber);
+
     };
 
     return (
-        <div className="App">
+        <div className="App" role="application">
             <header className='Header'><h1>Roman Numeral Converter</h1></header>
             <main className='Main'>
                 <RomanNumeral result={result} />

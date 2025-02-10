@@ -26,12 +26,13 @@ function EnterNumber({ onNumberChange }) {
     };
 
     return (
-        <div className={styles.container}>
+        <form className={styles.container} onSubmit={(e) => e.preventDefault()}>
             <label htmlFor="number" className={styles.label}>
-                Please enter a number between <span className={styles.highlight}>1 - 3999</span> to convert to Roman Numerals
+                Please enter a number between <span className={styles.highlight}>1 and 3999</span> to convert to Roman Numerals
             </label>
             <div className={styles.inputWrapper}>
                 <input
+                    id="number"
                     type="number"
                     min="1"
                     max="3999"
@@ -47,10 +48,11 @@ function EnterNumber({ onNumberChange }) {
                             e.preventDefault();
                         }
                     }}
+                    aria-label="Enter a number between 1 and 3999"
                 />
                 <span className={styles.placeholder}>Enter a number:-</span>
             </div>
-        </div>
+        </form>
     );
 }
 

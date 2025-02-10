@@ -5,9 +5,11 @@ function RomanNumeral({ result }) {
     const displayText = result === '' ? <span>Result will appear here</span> : result;
     
     return (
-        <div className={styles.romannumeral}>
-            <p className={styles.result}>{displayText}</p>
-        </div>
+        <section className={styles.romannumeral} aria-live="polite">
+            <output className={styles.result} role="status">
+                {displayText}
+            </output>
+        </section>
     );
 }
 
