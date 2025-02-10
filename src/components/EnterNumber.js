@@ -36,6 +36,9 @@ function EnterNumber({ onNumberChange }) {
                 className={styles.input}
                 value={number}
                 onChange={handleChange}
+                onInput={(e) => {
+                    e.target.value = e.target.value.replace(/[^\d]/g, '');
+                }}
                 onKeyDown={(e) => {
                     if (e.key === 'e' || e.key === 'E') {
                         e.preventDefault();

@@ -99,13 +99,11 @@
     width: max-content;
     min-width: 250px;
     text-align: center;
+    position: relative;
 
     @media screen and (max-width: 768px) {
         font-size: 1.5rem;
-        /* min-width: 2; */
-        /* max-width: 80%; */
         text-align: center;
-        
     }
     
     &::-webkit-inner-spin-button,
@@ -126,21 +124,42 @@
         color: var(--placeholder-color);
         font-size: 0.9rem;
         text-align: center;
-        vertical-align: middle;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        opacity: 1;
         font-family: 'Cinzel', serif;
+        line-height: 2;
+        position: relative;
+        top: -0.5em;
+    }
 
-        @media screen and (max-width: 768px) {
-            font-size: 0.8rem;
-            position: static;
-            transform: none;
-            width: 100%;
-            position: relative;
-            left: 0;
+    @supports (-webkit-touch-callout: none) {
+        /* Safari specific styles */
+        &::placeholder {
+            opacity: 0;
             top: -0.25em;
+            line-height: 2;
+            height: 38px;
+        }
+
+        &::after {
+            content: "Enter a number:-";
+            position: absolute;
+            height: 38px;
+            top: 3em;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            color: var(--placeholder-color);
+            font-size: 0.9rem;
+            font-family: 'Cinzel', serif;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            pointer-events: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &::placeholder {
+            font-size: 0.8rem;
         }
     }
 }
@@ -161,5 +180,6 @@
     color: #333333;
     font-weight: 700;
     display: block;
+    font-size: 1.2rem;
 }
 
