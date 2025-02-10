@@ -27,24 +27,29 @@ function EnterNumber({ onNumberChange }) {
 
     return (
         <div className={styles.container}>
-            <label htmlFor="number" className={styles.label}>Please enter a number between <span className={styles.highlight}>1 and 3999</span> to convert to Roman Numerals</label>
-            <input
-                type="number"
-                min="1"
-                max="3999"
-                placeholder="Enter a number:-"
-                className={styles.input}
-                value={number}
-                onChange={handleChange}
-                onInput={(e) => {
-                    e.target.value = e.target.value.replace(/[^\d]/g, '');
-                }}
-                onKeyDown={(e) => {
-                    if (e.key === 'e' || e.key === 'E') {
-                        e.preventDefault();
-                    }
-                }}
-            />
+            <label htmlFor="number" className={styles.label}>
+                Please enter a number between <span className={styles.highlight}>1 - 3999</span> to convert to Roman Numerals
+            </label>
+            <div className={styles.inputWrapper}>
+                <input
+                    type="number"
+                    min="1"
+                    max="3999"
+                    placeholder=" "
+                    className={styles.input}
+                    value={number}
+                    onChange={handleChange}
+                    onInput={(e) => {
+                        e.target.value = e.target.value.replace(/[^\d]/g, '');
+                    }}
+                    onKeyDown={(e) => {
+                        if (e.key === 'e' || e.key === 'E') {
+                            e.preventDefault();
+                        }
+                    }}
+                />
+                <span className={styles.placeholder}>Enter a number:-</span>
+            </div>
         </div>
     );
 }

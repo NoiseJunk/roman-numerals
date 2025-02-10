@@ -92,6 +92,11 @@
     }
 }
 
+.inputWrapper {
+    position: relative;
+    width: max-content;
+}
+
 .input {
     padding: var(--input-padding);
     border: 4px solid var(--border-color);
@@ -100,74 +105,33 @@
     min-width: 250px;
     text-align: center;
     position: relative;
-
-    @media screen and (max-width: 768px) {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button {
-        opacity: 1;
-        height: 100%;
-        position: absolute;
-        top: 50%;
-        width: 2em;
-        right: 0;
-        transform: translateY(-50%);
-        cursor: pointer;
-        background: linear-gradient(to right, rgba(139, 115, 85, 0.1), rgba(139, 115, 85, 0.2));
-
-    }
+    /* min-height: 60px; */
 
     &::placeholder {
-        color: var(--placeholder-color);
-        font-size: 0.9rem;
-        text-align: center;
-        opacity: 1;
-        font-family: 'Cinzel', serif;
-        line-height: 2;
-        position: relative;
-        top: -0.5em;
-    }
-
-    @supports (-webkit-touch-callout: none) {
-        /* Safari specific styles */
-        &::placeholder {
-            opacity: 0;
-            top: -0.25em;
-            line-height: 2;
-            height: 38px;
-        }
-
-        &::after {
-            content: "Enter a number:-";
-            position: absolute;
-            height: 38px;
-            top: 3em;
-            left: 50%;
-            transform: translate(-50%, -60%);
-            color: var(--placeholder-color);
-            font-size: 0.9rem;
-            font-family: 'Cinzel', serif;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            pointer-events: none;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        &::placeholder {
-            font-size: 0.8rem;
-        }
+        opacity: 0;
     }
 }
 
-.input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+.placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--placeholder-color);
+    font-size: 0.9rem;
+    font-family: 'Cinzel', serif;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    display: none;
+}
+
+.input:placeholder-shown + .placeholder {
+    display: block;
+}
+
+.input:focus + .placeholder {
+    display: none;
 }
 
 .display {
