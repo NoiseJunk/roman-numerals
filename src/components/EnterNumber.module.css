@@ -132,6 +132,16 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-family: 'Cinzel', serif;
+
+        @media screen and (max-width: 768px) {
+            font-size: 0.8rem;
+            position: static;
+            transform: none;
+            width: 100%;
+            position: relative;
+            left: 0;
+            top: -0.25em;
+        }
     }
 }
 
