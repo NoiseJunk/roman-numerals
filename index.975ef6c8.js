@@ -18590,6 +18590,7 @@ function App() {
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "App",
+        role: "application",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
                 className: "Header",
@@ -18597,12 +18598,12 @@ function App() {
                     children: "Roman Numeral Converter"
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 18,
+                    lineNumber: 19,
                     columnNumber: 40
                 }, this)
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 18,
+                lineNumber: 19,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
@@ -18612,20 +18613,20 @@ function App() {
                         result: result
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 20,
+                        lineNumber: 21,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _enterNumberDefault.default), {
                         onNumberChange: handleNumberChange
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 21,
+                        lineNumber: 22,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 19,
+                lineNumber: 20,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
@@ -18635,7 +18636,7 @@ function App() {
                         children: "Built by Simon Middleton - Copyright \xa9 MMXXV"
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 24,
+                        lineNumber: 25,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -18646,24 +18647,24 @@ function App() {
                             children: "View on GitHub"
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 26,
+                            lineNumber: 27,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 25,
+                        lineNumber: 26,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 23,
+                lineNumber: 24,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 17,
+        lineNumber: 18,
         columnNumber: 9
     }, this);
 }
@@ -18711,8 +18712,9 @@ function EnterNumber({ onNumberChange }) {
         setNumber(value);
         onNumberChange(Number(value));
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
         className: (0, _enterNumberModuleCssDefault.default).container,
+        onSubmit: (e)=>e.preventDefault(),
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                 htmlFor: "number",
@@ -18721,7 +18723,7 @@ function EnterNumber({ onNumberChange }) {
                     "Please enter a number between ",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: (0, _enterNumberModuleCssDefault.default).highlight,
-                        children: "1 - 3999"
+                        children: "1 and 3999"
                     }, void 0, false, {
                         fileName: "src/components/EnterNumber.js",
                         lineNumber: 31,
@@ -18738,6 +18740,7 @@ function EnterNumber({ onNumberChange }) {
                 className: (0, _enterNumberModuleCssDefault.default).inputWrapper,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        id: "number",
                         type: "number",
                         min: "1",
                         max: "3999",
@@ -18750,7 +18753,8 @@ function EnterNumber({ onNumberChange }) {
                         },
                         onKeyDown: (e)=>{
                             if (e.key === 'e' || e.key === 'E') e.preventDefault();
-                        }
+                        },
+                        "aria-label": "Enter a number between 1 and 3999"
                     }, void 0, false, {
                         fileName: "src/components/EnterNumber.js",
                         lineNumber: 34,
@@ -18761,7 +18765,7 @@ function EnterNumber({ onNumberChange }) {
                         children: "Enter a number:-"
                     }, void 0, false, {
                         fileName: "src/components/EnterNumber.js",
-                        lineNumber: 51,
+                        lineNumber: 53,
                         columnNumber: 17
                     }, this)
                 ]
@@ -18994,10 +18998,12 @@ function RomanNumeral({ result }) {
         lineNumber: 5,
         columnNumber: 41
     }, this) : result;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         className: (0, _romanNumeralModuleCssDefault.default).romannumeral,
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+        "aria-live": "polite",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("output", {
             className: (0, _romanNumeralModuleCssDefault.default).result,
+            role: "status",
             children: displayText
         }, void 0, false, {
             fileName: "src/components/RomanNumeral.js",
