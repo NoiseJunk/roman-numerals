@@ -18721,11 +18721,11 @@ function EnterNumber({ onNumberChange }) {
                     "Please enter a number between ",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: (0, _enterNumberModuleCssDefault.default).highlight,
-                        children: "1 and 3999"
+                        children: "1 - 3999"
                     }, void 0, false, {
                         fileName: "src/components/EnterNumber.js",
-                        lineNumber: 30,
-                        columnNumber: 92
+                        lineNumber: 31,
+                        columnNumber: 47
                     }, this),
                     " to convert to Roman Numerals"
                 ]
@@ -18734,23 +18734,40 @@ function EnterNumber({ onNumberChange }) {
                 lineNumber: 30,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                type: "number",
-                min: "1",
-                max: "3999",
-                placeholder: "Enter a number:-",
-                className: (0, _enterNumberModuleCssDefault.default).input,
-                value: number,
-                onChange: handleChange,
-                onInput: (e)=>{
-                    e.target.value = e.target.value.replace(/[^\d]/g, '');
-                },
-                onKeyDown: (e)=>{
-                    if (e.key === 'e' || e.key === 'E') e.preventDefault();
-                }
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: (0, _enterNumberModuleCssDefault.default).inputWrapper,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "number",
+                        min: "1",
+                        max: "3999",
+                        placeholder: " ",
+                        className: (0, _enterNumberModuleCssDefault.default).input,
+                        value: number,
+                        onChange: handleChange,
+                        onInput: (e)=>{
+                            e.target.value = e.target.value.replace(/[^\d]/g, '');
+                        },
+                        onKeyDown: (e)=>{
+                            if (e.key === 'e' || e.key === 'E') e.preventDefault();
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/EnterNumber.js",
+                        lineNumber: 34,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: (0, _enterNumberModuleCssDefault.default).placeholder,
+                        children: "Enter a number:-"
+                    }, void 0, false, {
+                        fileName: "src/components/EnterNumber.js",
+                        lineNumber: 51,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/EnterNumber.js",
-                lineNumber: 31,
+                lineNumber: 33,
                 columnNumber: 13
             }, this)
         ]
@@ -18776,7 +18793,9 @@ module.exports["container"] = `sOPVsW_container`;
 module.exports["display"] = `sOPVsW_display`;
 module.exports["highlight"] = `sOPVsW_highlight`;
 module.exports["input"] = `sOPVsW_input`;
+module.exports["inputWrapper"] = `sOPVsW_inputWrapper`;
 module.exports["label"] = `sOPVsW_label`;
+module.exports["placeholder"] = `sOPVsW_placeholder`;
 
 },{}],"gkKU3":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
